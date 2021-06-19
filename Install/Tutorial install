@@ -1,0 +1,26 @@
+--------------------------------------------------------------------------------------------
+sudo apt-get update
+
+sudo apt-get install git cmake
+--------------------------------------------------------------------------------------------
+git clone https://github.com/dusty-nv/jetson-inference
+cd jetson-inference
+git submodule update --init
+--------------------------------------------------------------------------------------------
+sudo apt-get install libpython3-dev python3-numpy
+--------------------------------------------------------------------------------------------
+cd jetson-inference    # omit if working directory is already jetson-inference/ from above
+mkdir build
+cd build
+cmake ../
+--------------------------------------------------------------------------------------------
+cd jetson-inference/build          # omit if working directory is already build/ from above
+make
+sudo make install
+sudo ldconfig
+---------------------------------------------------------------------------------------------
+
+# Install vscode on Jetson Nano
+https://github.com/JetsonHacksNano/installVSCode
+
+
